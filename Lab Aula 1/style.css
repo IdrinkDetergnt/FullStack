@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+ 
+/* ===== Configurações gerais da página ===== */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #0b1220;
+    color: #cbd5e1;
+    margin: 0;
+    padding: 0 20px 60px 20px;
+}
+ 
+/* ===== Título principal (efeito gradiente azul/ciano) ===== */
+h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-align: center;
+    padding: 50px 0 10px 0;
+    margin: 0;
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+ 
+/* ===== Subtítulos das seções ===== */
+h2 {
+    color: #ffffff;
+    font-weight: 600;
+    margin-top: 60px;
+    padding-left: 14px;
+    border-left: 4px solid #38bdf8;
+}
+ 
+/* ===== Parágrafos de texto ===== */
+p {
+    line-height: 1.7;
+    max-width: 700px;
+    color: #94a3b8;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+ 
+/* ===== Lista de habilidades (estilo "badge/pílula") ===== */
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+ 
+ul li {
+    background-color: #131c31;
+    border: 1px solid #1e293b;
+    color: #e2e8f0;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+}
+ 
+/* ===== Imagens da galeria (cards escuros) ===== */
+img {
+    border-radius: 14px;
+    margin: 8px;
+    border: 1px solid #1e293b;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease;
+}
+ 
+img:hover {
+    transform: translateY(-5px);
+}
+ 
+/* ===== Links (estilo botão em pílula) ===== */
+a {
+    display: inline-block;
+    color: #0b1220;
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 999px;
+    margin: 6px;
+    transition: opacity 0.2s ease;
+}
+ 
+a:hover {
+    opacity: 0.85;
+}
+ 
+/* ===== Iframes (cards escuros) ===== */
+iframe {
+    border-radius: 14px;
+    margin: 10px 8px;
+    border: 1px solid #1e293b;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+ 
