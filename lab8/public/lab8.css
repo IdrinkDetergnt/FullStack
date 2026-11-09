@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8f0fe;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.caixa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 32px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 300px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+input {
+    padding: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sucesso {
+    color: #1b7f3b;
+}
+
+.erro {
+    color: #c62828;
+}

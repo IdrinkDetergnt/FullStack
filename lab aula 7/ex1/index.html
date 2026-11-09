@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 1 - Canvas</title>
+</head>
+<body>
+  <canvas id="meuCanvas" width="340" height="340" style="border:1px solid #ccc"></canvas>
+
+  <script>
+    // 1) Pegar o canvas e o "contexto 2D" (a ferramenta de desenho)
+    const canvas = document.getElementById("meuCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // 2) Fundo branco (o canvas é 340 x 340)
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, 340, 340);
+
+    // 3) Quatro quadrados de 35 x 35 nos cantos
+    //    340 - 35 = 305 -> posição do quadrado que fica na direita / embaixo
+    ctx.fillStyle = "red";
+    ctx.fillRect(0, 0, 35, 35);        // canto superior esquerdo
+
+    ctx.fillStyle = "blue";
+    ctx.fillRect(305, 0, 35, 35);      // canto superior direito
+
+    ctx.fillStyle = "yellow";
+    ctx.fillRect(0, 305, 35, 35);      // canto inferior esquerdo
+
+    ctx.fillStyle = "green";
+    ctx.fillRect(305, 305, 35, 35);    // canto inferior direito
+
+    // 4) Duas diagonais (semi-transparentes)
+    ctx.lineWidth = 2;
+
+    ctx.strokeStyle = "rgba(255, 0, 0, 0.5)";   // vermelha
+    ctx.beginPath();
+    ctx.moveTo(0, 0);        // começa no canto superior esquerdo
+    ctx.lineTo(340, 340);    // termina no canto inferior direito
+    ctx.stroke();
+
+    ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";   // azul
+    ctx.beginPath();
+    ctx.moveTo(0, 340);      // começa no canto inferior esquerdo
+    ctx.lineTo(340, 0);      // termina no canto superior direito
+    ctx.stroke();
+
+    // 5) Linha horizontal verde no meio (340 / 2 = 170)
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "rgba(0, 150, 0, 0.5)";
+    ctx.beginPath();
+    ctx.moveTo(0, 170);
+    ctx.lineTo(340, 170);
+    ctx.stroke();
+
+    // 6) Semicírculo verde embaixo da linha
+    //    centro = (170, 170); raio = 57; de 0 até Math.PI = metade de baixo
+    ctx.beginPath();
+    ctx.arc(170, 170, 57, 0, Math.PI);
+    ctx.stroke();
+
+    // 7) Dois círculos amarelos com borda verde (raio 18)
+    ctx.fillStyle = "yellow";
+    ctx.strokeStyle = "green";
+    ctx.lineWidth = 2;
+
+    ctx.beginPath();
+    ctx.arc(57, 115, 18, 0, 2 * Math.PI);   // esquerdo
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(285, 115, 18, 0, 2 * Math.PI);  // direito
+    ctx.fill();
+    ctx.stroke();
+
+    // 8) Texto centralizado no topo
+    ctx.fillStyle = "black";
+    ctx.font = "20px Arial";
+    ctx.textAlign = "center";               // centraliza em volta do x
+    ctx.fillText("Desenvolvimento Web", 170, 60);
+  </script>
+</body>
+</html>

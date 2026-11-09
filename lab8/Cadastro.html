@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/lab8.css">
+</head>
+<body>
+    <main class="caixa">
+        <h1>Cadastro</h1>
+        <form action="/cadastra" method="post">
+            <label for="usuario">Usuário</label>
+            <input type="text" id="usuario" name="usuario" required>
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <a href="/login">Já tenho conta</a>
+        <a href="/">Voltar para projetos</a>
+    </main>
+</body>
+</html>
